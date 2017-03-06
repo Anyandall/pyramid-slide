@@ -22,7 +22,7 @@
         </tr>
         <tr>
           <th>
-            <select name="symbol" onchange="change_symbol()">
+            <select id="symbol" value="#" onchange="change_symbol(value)">
               <option value="#" selected>#</option>
               <option value="@">@</option>
               <option value="X">X</option>
@@ -30,22 +30,19 @@
             </select>
           </th>
           <th>
-            <input type="range" id="how_high" min="1" max="20" value="3" oninput="drawPyramid(value)"></input>
+            <input type="range" id="height" min="1" max="20" value="3" oninput="drawPyramid(value)"></input>
           </th>
         </tr>
       </table>
     </form>
-
-
-
+    <div id="construction">
+        <p>Uh oh! the pyramid is still under construction.</p>
+        <p>Check back again soon... our developers are hard at wrk as we speak!</p>
+    </div>
     <div id="pyramid">
         <!-- Our pyramid will go inside here -->
-
-        <div id="construction">
-            <p>Uh oh! the pyramid is still under construction.</p>
-            <p>Check back again soon... our developers are hard at wrk as we speak!</p>
-        </div>
     </div>
+
   <script src="pyramid-slide.js"></script>
 </body>
 </html>

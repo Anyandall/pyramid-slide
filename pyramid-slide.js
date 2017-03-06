@@ -1,5 +1,17 @@
+var height = document.getElementById("height").value;
+var symbol = document.getElementById("symbol").value;
 
-drawPyramid(document.getElementById("how_high").value);
+drawPyramid(height);
+
+
+
+function change_symbol(symbol) {
+
+  var pyramid_text = document.getElementById("pyramid");
+  var new_pyramid = pyramid_text.replace()
+}
+
+
 
 
 /**
@@ -9,12 +21,15 @@ drawPyramid(document.getElementById("how_high").value);
  */
 function drawPyramid(height) {
 
+var current_pyramid = document.getElementById("pyramid");
+current_pyramid.innerText = ""
     // TODO 2
     // delete the "under construction" element, ie the <div id="notice">
 //    document.getElementById("construction").remove();
 
 
     // for each row....
+
     for (var row = 0; row < height; row++) {
 
         // figure out number of bricks and spaces
@@ -36,10 +51,14 @@ function drawPyramid(height) {
         // TODO 1
         // create an element whose inner text is rowStr,
         // and insert it as a child of the container <div id="pyramid">
+
     //    var new_pyramid = document.getElementById("pyramid");
     //    new_pyramid.innerHTML = rowStr + "<br>";
+
+
+
         var text = document.createElement("p");
-        text.innerText = rowStr
+        text.innerText = rowStr;
         document.getElementById("pyramid").appendChild(text)
     }
 }
