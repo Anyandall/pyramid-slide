@@ -22,7 +22,7 @@
         </tr>
         <tr>
           <th>
-            <select id="symbol" value="#" onchange="change_symbol(value)">
+            <select id="symbol" value="#" oninput="change_symbol(value)">
               <option value="#" selected>#</option>
               <option value="@">@</option>
               <option value="X">X</option>
@@ -30,7 +30,7 @@
             </select>
           </th>
           <th>
-            <input type="range" id="height" min="1" max="20" value="3" oninput="drawPyramid(value)"></input>
+            <input type="range" id="height" min="1" max="20" value="5" oninput="drawPyramid(value)"></input><output id="slider_value"></output>
           </th>
         </tr>
       </table>
